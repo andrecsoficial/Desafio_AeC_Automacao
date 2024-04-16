@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "e5ZuVf+7timsmC0BPq2mJhA4ucjY7eeMbsK0DnyhokfcIJbHLN1WnHQZscTEE4NCyy/EFg9CBRoMBiiVJKamUg==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre.costa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\selenium.webdriver\\4.19.0\\selenium.webdriver.4.19.0.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

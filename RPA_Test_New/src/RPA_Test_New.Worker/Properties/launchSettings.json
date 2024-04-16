@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "RPA_Test_New.Worker": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
