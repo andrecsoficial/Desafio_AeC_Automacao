@@ -5,6 +5,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{0780C656-69BC-4830-B668-4A22196B7A08}|src\\RPA_Test_New.Worker\\RPA_Test_New.Worker.csproj|c:\\projetos\\rpa_test_new\\src\\rpa_test_new.worker\\jobs\\alurajob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0780C656-69BC-4830-B668-4A22196B7A08}|src\\RPA_Test_New.Worker\\RPA_Test_New.Worker.csproj|solutionrelative:src\\rpa_test_new.worker\\jobs\\alurajob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|c:\\projetos\\rpa_test_new\\src\\rpa_test_new.application\\selenium\\pages\\alura\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|solutionrelative:src\\rpa_test_new.application\\selenium\\pages\\alura\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|c:\\projetos\\rpa_test_new\\src\\rpa_test_new.application\\selenium\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|solutionrelative:src\\rpa_test_new.application\\selenium\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43202082-2CC8-4FC5-94CE-396F3A3733F1}|src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj|c:\\projetos\\rpa_test_new\\src\\rpa_test_new.domain\\interfaces\\inavigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43202082-2CC8-4FC5-94CE-396F3A3733F1}|src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj|solutionrelative:src\\rpa_test_new.domain\\interfaces\\inavigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|c:\\projetos\\rpa_test_new\\src\\rpa_test_new.application\\selenium\\controllers\\aluracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55697C38-9E26-41FB-9C4C-C7A33D4058B3}|src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj|solutionrelative:src\\rpa_test_new.application\\selenium\\controllers\\aluracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +44,61 @@
               "RelativeDocumentMoniker": "src\\RPA_Test_New.Worker\\Jobs\\AluraJob.cs",
               "ToolTip": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Worker\\Jobs\\AluraJob.cs",
               "RelativeToolTip": "src\\RPA_Test_New.Worker\\Jobs\\AluraJob.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T21:02:18.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Navigator.cs",
+              "DocumentMoniker": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Navigator.cs",
+              "RelativeDocumentMoniker": "src\\RPA_Test_New.Application\\Selenium\\Navigator.cs",
+              "ToolTip": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Navigator.cs",
+              "RelativeToolTip": "src\\RPA_Test_New.Application\\Selenium\\Navigator.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:32:56.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "INavigator.cs",
+              "DocumentMoniker": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\Interfaces\\INavigator.cs",
+              "RelativeDocumentMoniker": "src\\RPA_Test_New.Domain\\Interfaces\\INavigator.cs",
+              "ToolTip": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\Interfaces\\INavigator.cs",
+              "RelativeToolTip": "src\\RPA_Test_New.Domain\\Interfaces\\INavigator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:38:11.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AluraController.cs",
+              "DocumentMoniker": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Controllers\\AluraController.cs",
+              "RelativeDocumentMoniker": "src\\RPA_Test_New.Application\\Selenium\\Controllers\\AluraController.cs",
+              "ToolTip": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Controllers\\AluraController.cs",
+              "RelativeToolTip": "src\\RPA_Test_New.Application\\Selenium\\Controllers\\AluraController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:50:48.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomePage.cs",
+              "DocumentMoniker": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Pages\\Alura\\HomePage.cs",
+              "RelativeDocumentMoniker": "src\\RPA_Test_New.Application\\Selenium\\Pages\\Alura\\HomePage.cs",
+              "ToolTip": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\Selenium\\Pages\\Alura\\HomePage.cs",
+              "RelativeToolTip": "src\\RPA_Test_New.Application\\Selenium\\Pages\\Alura\\HomePage.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wCMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T19:54:45.658Z",
               "EditorCaption": ""
             }
           ]

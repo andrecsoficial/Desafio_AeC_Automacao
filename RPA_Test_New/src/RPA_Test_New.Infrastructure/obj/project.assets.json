@@ -34,7 +34,7 @@
           "buildTransitive/Selenium.WebDriver.targets": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/123.0.6312.12200": {
+      "Selenium.WebDriver.ChromeDriver/124.0.6367.6000": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -44,7 +44,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Selenium.WebDriver": "4.19.0"
+          "Selenium.WebDriver": "4.19.0",
+          "Selenium.WebDriver.ChromeDriver": "124.0.6367.6000"
         },
         "compile": {
           "bin/placeholder/RPA_Test_New.Domain.dll": {}
@@ -103,10 +104,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/123.0.6312.12200": {
-      "sha512": "IDN7gQ7wlXmV05+Y4K6UdnY36H/SrIxMUqAnKtT6yEBnVNX4K03rHRs8zkMM+EC78V0Xt+PFpyDUYto+jG4t/w==",
+    "Selenium.WebDriver.ChromeDriver/124.0.6367.6000": {
+      "sha512": "yQ05VeigCdrPGs6Urxj5R2gxvxTLgWmPM4SX1xy/w+dq7e+ZljgkpNq5hrxxFQ2WDng55KmXmlG0qctt7VA5eQ==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/123.0.6312.12200",
+      "path": "selenium.webdriver.chromedriver/124.0.6367.6000",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -123,7 +124,7 @@
         "driver/win32/LICENSE.chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.123.0.6312.12200.nupkg.sha512",
+        "selenium.webdriver.chromedriver.124.0.6367.6000.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -136,7 +137,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "RPA_Test_New.Domain >= 1.0.0",
-      "Selenium.WebDriver.ChromeDriver >= 123.0.6312.12200"
+      "Selenium.WebDriver.ChromeDriver >= 124.0.6367.6000"
     ]
   },
   "packageFolders": {
@@ -194,7 +195,7 @@
         "dependencies": {
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[123.0.6312.12200, )"
+            "version": "[124.0.6367.6000, )"
           }
         },
         "imports": [
@@ -208,20 +209,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.29, 6.0.29]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

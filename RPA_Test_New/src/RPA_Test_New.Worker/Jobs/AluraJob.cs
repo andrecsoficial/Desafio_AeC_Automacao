@@ -1,5 +1,4 @@
-﻿
-using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium.Chrome;
 using RPA_Test_New.Domain.Interfaces;
 
 namespace RPA_Test_New.Worker.Jobs
@@ -9,22 +8,30 @@ namespace RPA_Test_New.Worker.Jobs
     {
 
         protected IDriverFactoryService _driverFactory { get; init; }
+        private INavigator _navigator { get; init; }
 
         public AluraJob(ILogger<AluraJob> logger
-                        ,IDriverFactoryService driverFactoryService) : base(logger) 
+                        ,IDriverFactoryService driverFactoryService
+                        ,INavigator navigator) : base(logger) 
         { 
             _driverFactory = driverFactoryService;
+            _navigator = navigator;    
         }
 
         public override async Task Execute(IJobExecutionContext context)
         {
             try
             {
-                Console.WriteLine("Teste da solution");
+                _logger.LogInformation("Inicializando aplicação...");
 
                 SetupDriver();
 
-                Console.WriteLine("Espera...");
+                //Navegação
+                var navigationResult = await _navigator.NavigationAlura("https://www.alura.com.br/");
+
+                _driverFactory.Quit();
+
+                _logger.LogInformation("Encerrando aplicação...");
             }
             catch (Exception ex)
             {
@@ -38,7 +45,6 @@ namespace RPA_Test_New.Worker.Jobs
             try
             {
                 var opts = new ChromeOptions();
-
                 _driverFactory.StartDriver(opts: opts);
             }
             catch (System.InvalidOperationException ex)
@@ -50,5 +56,7 @@ namespace RPA_Test_New.Worker.Jobs
                 _logger.LogError($"Ocorreu um erro genérico ao instanciar o driver: {ex.Message}");
             }
         }
+
+        
     }
 }

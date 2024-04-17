@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KGonq8YyCNtROPdNb1EhM97IEgHKhwUQLhxBQ+dAY3BTvKyMi6rcjMNaWGtSTQcGVoxNH2g+e44UqnnMsedhpg==",
+  "dgSpecHash": "Y52WBeZsHYYUZwiaYjhse41aUbswq+TVf8ybu0cQ0Cy1vWWjN+ZiVY/xiC+0IoKRh4F78GF2RTytItvNVcvrxQ==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Worker\\RPA_Test_New.Worker.csproj",
   "expectedPackageFiles": [
@@ -76,7 +76,7 @@
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.hosting.windowsservices\\6.0.0\\microsoft.extensions.hosting.windowsservices.6.0.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging.configuration\\6.0.0\\microsoft.extensions.logging.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging.console\\6.0.0\\microsoft.extensions.logging.console.6.0.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.logging.debug\\6.0.0\\microsoft.extensions.logging.debug.6.0.0.nupkg.sha512",
@@ -106,7 +106,7 @@
     "C:\\Users\\andre.costa\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.3.3\\quartz.extensions.dependencyinjection.3.3.3.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\quartz.extensions.hosting\\3.3.3\\quartz.extensions.hosting.3.3.3.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\selenium.webdriver\\4.19.0\\selenium.webdriver.4.19.0.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\selenium.webdriver.chromedriver\\123.0.6312.12200\\selenium.webdriver.chromedriver.123.0.6312.12200.nupkg.sha512",
+    "C:\\Users\\andre.costa\\.nuget\\packages\\selenium.webdriver.chromedriver\\124.0.6367.6000\\selenium.webdriver.chromedriver.124.0.6367.6000.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
@@ -159,11 +159,7 @@
     "C:\\Users\\andre.costa\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\yamldotnet\\8.1.2\\yamldotnet.8.1.2.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+    "C:\\Users\\andre.costa\\.nuget\\packages\\yamldotnet\\8.1.2\\yamldotnet.8.1.2.nupkg.sha512"
   ],
   "logs": []
 }

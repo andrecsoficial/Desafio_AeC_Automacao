@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RPA_Test_New.Application.Selenium;
+using RPA_Test_New.Application.Selenium.Controllers;
+using RPA_Test_New.Application.Selenium.Pages.Alura;
 using RPA_Test_New.Domain.Interfaces;
 using RPA_Test_New.Infrastructure.Services;
 
@@ -13,12 +16,13 @@ namespace RPA_Test_New.Application.Configuration
 
 
             //Serviços
-
+            services.AddSingleton<INavigator, Navigator>();
 
             //Controllers
-
+            services.AddTransient<AluraController>();
 
             //Páginas
+            services.AddTransient<HomePage>();
 
             services.AddSingleton<IDriverFactoryService>(_ =>
             {

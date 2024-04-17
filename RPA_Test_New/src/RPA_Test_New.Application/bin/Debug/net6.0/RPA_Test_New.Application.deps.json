@@ -10,8 +10,11 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1",
           "RPA_Test_New.Domain": "1.0.0",
-          "RPA_Test_New.Infrastructure": "1.0.0"
+          "RPA_Test_New.Infrastructure": "1.0.0",
+          "Selenium.WebDriver": "4.19.0",
+          "Selenium.WebDriver.ChromeDriver": "124.0.6367.6000"
         },
         "runtime": {
           "RPA_Test_New.Application.dll": {}
@@ -31,6 +34,17 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.324.11423"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/8.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.324.11423"
           }
@@ -66,11 +80,12 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/123.0.6312.12200": {},
+      "Selenium.WebDriver.ChromeDriver/124.0.6367.6000": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "RPA_Test_New.Domain/1.0.0": {
         "dependencies": {
-          "Selenium.WebDriver": "4.19.0"
+          "Selenium.WebDriver": "4.19.0",
+          "Selenium.WebDriver.ChromeDriver": "124.0.6367.6000"
         },
         "runtime": {
           "RPA_Test_New.Domain.dll": {}
@@ -79,7 +94,7 @@
       "RPA_Test_New.Infrastructure/1.0.0": {
         "dependencies": {
           "RPA_Test_New.Domain": "1.0.0",
-          "Selenium.WebDriver.ChromeDriver": "123.0.6312.12200"
+          "Selenium.WebDriver.ChromeDriver": "124.0.6367.6000"
         },
         "runtime": {
           "RPA_Test_New.Infrastructure.dll": {}
@@ -107,6 +122,13 @@
       "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Abstractions/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RIFgaqoaINxkM2KTOw72dmilDmTrYA0ns2KW4lDz4gZ2+o6IQ894CzmdL3StM2oh7QQq44nCWiqKqc4qUI9Jmg==",
+      "path": "microsoft.extensions.logging.abstractions/8.0.1",
+      "hashPath": "microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512"
+    },
     "Microsoft.Extensions.Primitives/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -128,12 +150,12 @@
       "path": "selenium.webdriver/4.19.0",
       "hashPath": "selenium.webdriver.4.19.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/123.0.6312.12200": {
+    "Selenium.WebDriver.ChromeDriver/124.0.6367.6000": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IDN7gQ7wlXmV05+Y4K6UdnY36H/SrIxMUqAnKtT6yEBnVNX4K03rHRs8zkMM+EC78V0Xt+PFpyDUYto+jG4t/w==",
-      "path": "selenium.webdriver.chromedriver/123.0.6312.12200",
-      "hashPath": "selenium.webdriver.chromedriver.123.0.6312.12200.nupkg.sha512"
+      "sha512": "sha512-yQ05VeigCdrPGs6Urxj5R2gxvxTLgWmPM4SX1xy/w+dq7e+ZljgkpNq5hrxxFQ2WDng55KmXmlG0qctt7VA5eQ==",
+      "path": "selenium.webdriver.chromedriver/124.0.6367.6000",
+      "hashPath": "selenium.webdriver.chromedriver.124.0.6367.6000.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",

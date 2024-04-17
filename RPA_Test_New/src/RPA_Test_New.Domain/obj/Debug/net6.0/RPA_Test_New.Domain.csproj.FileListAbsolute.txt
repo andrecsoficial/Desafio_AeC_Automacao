@@ -1,6 +1,10 @@
+C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\RPA_Test_New.Domain.deps.json
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\RPA_Test_New.Domain.dll
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\RPA_Test_New.Domain.pdb
+C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.csproj.AssemblyReference.cache
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.AssemblyInfoInputs.cache
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.AssemblyInfo.cs
@@ -9,7 +13,3 @@ C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.D
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\refint\RPA_Test_New.Domain.dll
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.pdb
 C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\ref\RPA_Test_New.Domain.dll
-C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
-C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
-C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
-C:\Projetos\RPA_Test_New\src\RPA_Test_New.Domain\obj\Debug\net6.0\RPA_Test_New.Domain.csproj.AssemblyReference.cache
