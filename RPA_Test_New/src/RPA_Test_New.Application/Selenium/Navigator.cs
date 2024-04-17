@@ -22,11 +22,22 @@ namespace RPA_Test_New.Application.Selenium
             _aluraController = aluraController;
         }
 
-        public async Task<ResultProcess> NavigationAlura(string url)
+        public async Task<ResultProcess> NavigationAlura(string url, string searchWord)
         {
             _logger.LogInformation("Acessando URL");
             if (_aluraController.Home(url) is null)
                 return new(false, "Erro", "Falha ao acessar URL");
+
+            _logger.LogInformation("Efetua pesquisa");
+            if (_aluraController.Search(searchWord) is null)
+                return new(false, "Erro", "Falha ao efetuar pesquisa");
+
+            _logger.LogInformation("Acessa primeiro item da pesquisa");
+            if (_aluraController.Details() is null)
+                return new(false, "Erro", "Falha ao exibir detalhes");
+
+            _logger.LogInformation("Executa a extração dos dados");
+           
 
             return new(true, "Concluído", "Navegação concluída");
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eepK1tAUeGgezS2dCx9tJVuyd5ZUSJ4WGIXR4Ciz5kfcYF02STW+vK3re5veoKsvcI/CyCWemlrXlRhzQx4REA==",
+  "dgSpecHash": "K6pDVV8mh6tfG129nAnXUy+rWJw6rIX8xmlhNkTEQ0payIArb6BJnj7LKx0K6bP0KvsziQ6dNxMKDoKZDAH+pA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj",
+  "projectFilePath": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Application\\RPA_Test_New.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",

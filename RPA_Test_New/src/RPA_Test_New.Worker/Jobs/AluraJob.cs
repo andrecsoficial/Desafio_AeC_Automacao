@@ -9,13 +9,16 @@ namespace RPA_Test_New.Worker.Jobs
 
         protected IDriverFactoryService _driverFactory { get; init; }
         private INavigator _navigator { get; init; }
+        private IConfiguration _configuration { get; init; }
 
         public AluraJob(ILogger<AluraJob> logger
                         ,IDriverFactoryService driverFactoryService
-                        ,INavigator navigator) : base(logger) 
+                        ,INavigator navigator
+                        ,IConfiguration configuration) : base(logger) 
         { 
             _driverFactory = driverFactoryService;
             _navigator = navigator;    
+            _configuration = configuration;
         }
 
         public override async Task Execute(IJobExecutionContext context)
@@ -27,7 +30,9 @@ namespace RPA_Test_New.Worker.Jobs
                 SetupDriver();
 
                 //Navegação
-                var navigationResult = await _navigator.NavigationAlura("https://www.alura.com.br/");
+                string url = _configuration["Alura:URLs:Principal"];
+                string searchWord = _configuration["Alura:Words:SearchWord"];
+                var navigationResult = await _navigator.NavigationAlura(url, searchWord);
 
                 _driverFactory.Quit();
 

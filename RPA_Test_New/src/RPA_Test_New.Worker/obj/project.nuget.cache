@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y52WBeZsHYYUZwiaYjhse41aUbswq+TVf8ybu0cQ0Cy1vWWjN+ZiVY/xiC+0IoKRh4F78GF2RTytItvNVcvrxQ==",
+  "dgSpecHash": "yYbcPfTFPOLxFgKCQMQa4SDP8C4j3YqO4XjCskLAWOCjFayHy1BuxRYUWg6iPfdYGG0uQTMlJo1lGyjJPhImrA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Worker\\RPA_Test_New.Worker.csproj",
+  "projectFilePath": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Worker\\RPA_Test_New.Worker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre.costa\\.nuget\\packages\\aspnetcore.healthchecks.ui\\6.0.1-rc2.4\\aspnetcore.healthchecks.ui.6.0.1-rc2.4.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\6.0.1-rc2.4\\aspnetcore.healthchecks.ui.client.6.0.1-rc2.4.nupkg.sha512",

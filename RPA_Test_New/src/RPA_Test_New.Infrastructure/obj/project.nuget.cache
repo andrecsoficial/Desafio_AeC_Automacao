@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "49U4LhNiUQL9Z6k1x5GAzxdkGzIhP8IATef21wM9/rSVfAcaNjI2+CC3TRC2UDupmbaaDHZwn11lpRrVOe+Jaw==",
+  "dgSpecHash": "l5ZaE5Xlx/5TTVLNS1rOm6Xb/TR+KG0liHd1OQQVinWMNvfv5M8onohecKvxSzqwVnvFMtStfZ+3zvti4E6Dzw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Infrastructure\\RPA_Test_New.Infrastructure.csproj",
+  "projectFilePath": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Infrastructure\\RPA_Test_New.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre.costa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\andre.costa\\.nuget\\packages\\selenium.webdriver\\4.19.0\\selenium.webdriver.4.19.0.nupkg.sha512",

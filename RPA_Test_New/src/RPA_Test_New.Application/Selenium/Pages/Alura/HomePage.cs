@@ -23,24 +23,53 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
         public ResultProcess HomePageAlura(string url)
         {
 
-            try
+            //Inicializa a página
+            _driver.Navigate().GoToUrl(url);
+            _driver.WaitTime();
+
+            if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])) is not null)
+                return new(true, "Acesso à página", "Página carregada com sucesso");
+
+            return new(false, "Falha da página", "Falha ao acesso a URL");
+
+        }
+
+        public ResultProcess Search(string searchWord)
+        {
+
+            //Insere texto na caixa de busca
+            if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])) is not null)
             {
-                _driver.Navigate().GoToUrl(url);
-                _driver.WaitTime();
+                _driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])).SendKeys(searchWord + Keys.Enter);
 
-                if (_driver.WaitElement(By.XPath("//*[@id='header-barraBusca-form-campoBusca']")) is not null)
-                    return new(true, "Acesso à página", "Página carregada com sucesso");
+                Thread.Sleep(5000);
 
-                return new(false, "Falha da página", "Falha ao acesso a URL");
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:filter"])) is not null)
+                    return new(true, "Busca", "Busca efetuada");
+
+                return new(false, "Falha na busca", "Falha ao executar a busca na caixa de pesquisa");
 
             }
-            catch (Exception ex)
+
+            return new(false, "Falha da página", "Falha ao acesso a URL");
+        }
+
+        public ResultProcess Details()
+        {
+            //Abre detalhes do primeiro item retornado da busca
+            if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:searchResult"])) is not null)
             {
-               
-                return new(false, "Erro", ex.StackTrace);
-                
+                _driver.WaitElement(By.XPath(_configuration["Alura:HomePage:searchResult"])).Click();
+
+                Thread.Sleep(5000);
+
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:Conclusao"])) is not null)
+                    return new(true, "Detalhes", "Detalhes exibido");
+
+                return new(false, "Falha no item", "Falha ao exibir detalhes");
             }
-            
+
+            return new(false, "Falha da página", "Falha ao acessar detalhes");
         }
 
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj": {}
+    "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj": {
+    "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj",
+        "projectUniqueName": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj",
         "projectName": "RPA_Test_New.Domain",
-        "projectPath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj",
+        "projectPath": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Domain\\RPA_Test_New.Domain.csproj",
         "packagesPath": "C:\\Users\\andre.costa\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\RPA_Test_New\\src\\RPA_Test_New.Domain\\obj\\",
+        "outputPath": "C:\\Projetos\\Desafio_AeC_Automacao\\RPA_Test_New\\src\\RPA_Test_New.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
