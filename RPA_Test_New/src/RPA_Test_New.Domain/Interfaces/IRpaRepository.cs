@@ -6,6 +6,6 @@ namespace RPA_Test_New.Domain.Interfaces
     public interface IRpaRepository
     {
         //INSERTs
-        Task<bool> InsertData(DataExtracted data, CancellationToken ct = default);
+        Task<bool> InsertData(List<DataExtracted> dataExtracted, CancellationToken ct = default);
     }
 }

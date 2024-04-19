@@ -24,7 +24,7 @@ namespace RPA_Test_New.Application.Configuration
 
             //Páginas
             services.AddTransient<HomePage>();
-            services.AddTransient<DetailsPage>();
+            
 
             services.AddSingleton<IDriverFactoryService>(_ =>
             {

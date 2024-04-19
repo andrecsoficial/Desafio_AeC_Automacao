@@ -21,7 +21,7 @@ namespace RPA_Test_New.Infrastructure.Data.Repositories
         }
 
         //INSERTs
-        public async Task<bool> InsertData(DataExtracted dataExtracted, CancellationToken ct = default)
+        public async Task<bool> InsertData(List<DataExtracted> dataExtracted, CancellationToken ct = default)
         {
 
             try
@@ -56,10 +56,13 @@ namespace RPA_Test_New.Infrastructure.Data.Repositories
                     commandInsert.Parameters.Add("@vcCargaHoraria", SqlDbType.VarChar);
                     commandInsert.Parameters.Add("@vcDescricao", SqlDbType.VarChar);
 
-                    commandInsert.Parameters["@vcTitulo"].Value = dataExtracted.titulo;
-                    commandInsert.Parameters["@vcProfessor"].Value = dataExtracted.professor;
-                    commandInsert.Parameters["@vcCargaHoraria"].Value = dataExtracted.cargaHoraria;
-                    commandInsert.Parameters["@vcDescricao"].Value = dataExtracted.descricao;
+                    foreach (var item in dataExtracted)
+                    {
+                        commandInsert.Parameters["@vcTitulo"].Value = item.titulo.ToString();
+                        commandInsert.Parameters["@vcProfessor"].Value = item.professor.ToString();
+                        commandInsert.Parameters["@vcCargaHoraria"].Value = item.cargaHoraria.ToString();
+                        commandInsert.Parameters["@vcDescricao"].Value = item.descricao.ToString();
+                    }
 
                     await commandInsert.ExecuteScalarAsync(ct);
 

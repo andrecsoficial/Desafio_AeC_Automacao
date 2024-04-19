@@ -10,7 +10,7 @@ namespace RPA_Test_New.Application.Selenium.Extensions
        => new(driver, System.TimeSpan.FromSeconds(seconds));
 
         //Aguardar elemento
-        public static IWebElement WaitElement(this IWebDriver driver, By by, int seconds = 30)
+        public static IWebElement WaitElement(this IWebDriver driver, By by, int seconds = 10)
         {
             try
             {
