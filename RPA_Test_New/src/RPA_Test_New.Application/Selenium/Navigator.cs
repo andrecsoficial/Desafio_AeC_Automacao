@@ -37,7 +37,10 @@ namespace RPA_Test_New.Application.Selenium
                 return new(false, "Erro", "Falha ao exibir detalhes");
 
             _logger.LogInformation("Executa a extração dos dados");
-           
+            if (_aluraController.Extraction() is null)
+            {
+
+            }
 
             return new(true, "Concluído", "Navegação concluída");
         }

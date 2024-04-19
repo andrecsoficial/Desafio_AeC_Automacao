@@ -38,7 +38,7 @@ namespace RPA_Test_New.Application.Selenium.Controllers
 
         public string Details()
         {
-            var result = _homePage.Details();
+            var result =  _homePage.Details();
             if (!result.sucess)
             {
                 return null;
