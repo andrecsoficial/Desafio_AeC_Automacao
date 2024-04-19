@@ -16,3 +16,17 @@ create table [DESAFIO].[TB_DADOS]
 	,[timestampTransaction] datetime default getdate()
 )
 
+
+create table NLog
+(
+	[ID] [int] PRIMARY KEY IDENTITY(1,1) not null
+	,[MachineName] [nvarchar](200) null
+	,[Level] [varchar](5) not null
+	,[Logged] [datetime] not null
+	,[UserName] [nvarchar](200) NULL
+	,[ThreadId] [nvarchar](200) not null
+	,[Message] [nvarchar](max) not null
+	,[Exception] [nvarchar](max) null
+	,[Logger] [nvarchar](250) not null
+)
+

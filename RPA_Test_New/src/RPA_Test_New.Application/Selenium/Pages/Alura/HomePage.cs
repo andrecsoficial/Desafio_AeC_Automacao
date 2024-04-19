@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using OpenQA.Selenium;
 using RPA_Test_New.Application.Selenium.Extensions;
 using RPA_Test_New.Domain.Entities;
@@ -14,14 +15,17 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
         private IWebDriver _driver => _driverManager.Instance;
         private IConfiguration _configuration { get; set; }
         private IRpaRepository _rpaRepository { get; set; }
+        private ILogger<HomePage> _logger { get; init; }
 
         public HomePage(IDriverFactoryService driverManager
                         , IConfiguration configuration
-                        , IRpaRepository rpaRepository)
+                        , IRpaRepository rpaRepository
+                        , ILogger<HomePage> logger)
         {
             _driverManager = driverManager;
             _configuration = configuration;
-            _rpaRepository = rpaRepository; 
+            _rpaRepository = rpaRepository;
+            _logger = logger;
         }
 
         public ResultProcess HomePageAlura(string url)
@@ -29,11 +33,17 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
 
             //Inicializa a página
             _driver.Navigate().GoToUrl(url);
+            Thread.Sleep(2000);
+            _driver.Manage().Window.Maximize();
             _driver.WaitTime();
 
             if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])) is not null)
+            {
+                _logger.LogInformation("Página carregada com sucesso");
                 return new(true, "Acesso à página", "Página carregada com sucesso");
+            }
 
+            _logger.LogError("Falha ao acesso a URL");
             return new(false, "Falha da página", "Falha ao acesso a URL");
 
         }
@@ -49,13 +59,18 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
                 Thread.Sleep(5000);
 
                 if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:filter"])) is not null)
+                {
+                    _logger.LogInformation("Busca efetuada");
                     return new(true, "Busca", "Busca efetuada");
+                }
 
+                _logger.LogError("Falha ao executar a busca na caixa de pesquisa");
                 return new(false, "Falha na busca", "Falha ao executar a busca na caixa de pesquisa");
 
             }
 
-            return new(false, "Falha da página", "Falha ao acesso a URL");
+            _logger.LogError("Falha na busca");
+            return new(false, "Falha da página", "Falha na busca");
         }
 
        
@@ -98,6 +113,7 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
 
                             var record = _rpaRepository.InsertData(dataExtracted);
                             
+                            
                             //retorna para resultado da busca
                             _driver.Navigate().Back();
 
@@ -105,15 +121,22 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
                         }
 
                         if (!flag)
+                        {
+                            _logger.LogError("Falha ao acessar detalhes");
                             return new(false, "Falha da página", "Falha ao acessar detalhes");
+                        }
 
                     }
 
                     if (!flag)
+                    {
+                        _logger.LogError("Falha ao acessar detalhes");
                         return new(false, "Falha da página", "Falha ao acessar detalhes");
+                    }
 
                 }
 
+                _logger.LogInformation("Extração concluída");
                 return new(true, "Processado", "Extração concluída");
 
             }

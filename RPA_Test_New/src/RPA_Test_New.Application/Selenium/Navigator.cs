@@ -26,17 +26,27 @@ namespace RPA_Test_New.Application.Selenium
         {
             _logger.LogInformation("Acessando URL");
             if (_aluraController.Home(url) is null)
+            {
+                _logger.LogError("Falha ao acessar URL");
                 return new(false, "Erro", "Falha ao acessar URL");
+            }
 
             _logger.LogInformation("Efetua pesquisa");
             if (_aluraController.Search(searchWord) is null)
+            {
+                _logger.LogError("Falha ao efetuar pesquisa");
                 return new(false, "Erro", "Falha ao efetuar pesquisa");
+            }
+               
 
             _logger.LogInformation("Acessa primeiro item da pesquisa");
             if (_aluraController.Details() is null)
+            {
+                _logger.LogError("Falha ao exibir detalhes");
                 return new(false, "Erro", "Falha ao exibir detalhes");
+            }
 
-            
+            _logger.LogInformation("Navegação concluída");
             return new(true, "Concluído", "Navegação concluída");
         }
 
