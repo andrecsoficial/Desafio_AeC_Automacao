@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 using RPA_Test_New.Application.Selenium.Extensions;
 using RPA_Test_New.Domain.Entities;
 using RPA_Test_New.Domain.Interfaces;
-using RPA_Test_New.Infrastructure.Data.Repositories;
+
 
 namespace RPA_Test_New.Application.Selenium.Pages.Alura
 {
@@ -28,19 +28,28 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
             _logger = logger;
         }
 
+      
         public ResultProcess HomePageAlura(string url)
         {
 
             //Inicializa a página
             _driver.Navigate().GoToUrl(url);
-            Thread.Sleep(2000);
-            _driver.Manage().Window.Maximize();
             _driver.WaitTime();
-
+            _driver.Manage().Window.Maximize();
+            
+            //Valida se a página carregou
             if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])) is not null)
             {
                 _logger.LogInformation("Página carregada com sucesso");
-                return new(true, "Acesso à página", "Página carregada com sucesso");
+
+                //Redireciona para o login
+                if (_driver.WaitElement(By.XPath("/html/body/main/section[1]/header/div/nav/div[3]/a[1]")) is not null)
+                {
+                    _logger.LogInformation("Acessa o login");
+                    _driver.WaitElement(By.XPath("/html/body/main/section[1]/header/div/nav/div[3]/a[1]")).Click();
+                    return new(true, "Acesso à página", "Página carregada com sucesso");
+                }
+                return new(false, "Falha da página", "Falha ao acesso a URL");
             }
 
             _logger.LogError("Falha ao acesso a URL");
@@ -48,32 +57,7 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
 
         }
 
-        public ResultProcess Search(string searchWord)
-        {
-
-            //Insere texto na caixa de busca
-            if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])) is not null)
-            {
-                _driver.WaitElement(By.XPath(_configuration["Alura:HomePage:txtSearch"])).SendKeys(searchWord + Keys.Enter);
-
-                Thread.Sleep(5000);
-
-                if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:filter"])) is not null)
-                {
-                    _logger.LogInformation("Busca efetuada");
-                    return new(true, "Busca", "Busca efetuada");
-                }
-
-                _logger.LogError("Falha ao executar a busca na caixa de pesquisa");
-                return new(false, "Falha na busca", "Falha ao executar a busca na caixa de pesquisa");
-
-            }
-
-            _logger.LogError("Falha na busca");
-            return new(false, "Falha da página", "Falha na busca");
-        }
-
-       
+              
         public ResultProcess Details()
         {
 

@@ -1,10 +1,23 @@
 Use AeC
 
-
+-- drop table [DESAFIO].[TB_ACESSO]
 -- drop table [DESAFIO].[TB_DADOS]
+-- truncate table [DESAFIO].[TB_ACESSO]
 -- truncate table [DESAFIO].[TB_DADOS]
 
-create schema DESAFIO
+select * from  [DESAFIO].[TB_ACESSO]
+
+-- create schema DESAFIO
+
+create table [DESAFIO].[TB_ACESSO]
+(
+	[TB_ACESSO_uiId] [uniqueidentifier] primary key default NewSequentialID() not null
+	,[vcUsuario] [varchar](50) not null
+	,[vcSenha] [varchar](100) not null
+	,[biAtivo][bit] default 1
+	,[dtDataAtualizacao] datetime
+	,[timestampTransaction] datetime default getdate()
+)
 
 create table [DESAFIO].[TB_DADOS]
 (

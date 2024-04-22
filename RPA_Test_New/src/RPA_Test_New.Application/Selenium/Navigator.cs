@@ -22,13 +22,20 @@ namespace RPA_Test_New.Application.Selenium
             _aluraController = aluraController;
         }
 
-        public async Task<ResultProcess> NavigationAlura(string url, string searchWord)
+        public async Task<ResultProcess> NavigationAlura(string url, string searchWord, AluraCredential credential)
         {
             _logger.LogInformation("Acessando URL");
             if (_aluraController.Home(url) is null)
             {
                 _logger.LogError("Falha ao acessar URL");
                 return new(false, "Erro", "Falha ao acessar URL");
+            }
+
+            _logger.LogInformation("Realiza o Logon");
+            if (_aluraController.Login(credential) is null)
+            {
+                _logger.LogError("Falha ao realizar o login");
+                return new(false, "Erro", "Falha ao realizar o login");
             }
 
             _logger.LogInformation("Efetua pesquisa");
@@ -38,8 +45,7 @@ namespace RPA_Test_New.Application.Selenium
                 return new(false, "Erro", "Falha ao efetuar pesquisa");
             }
                
-
-            _logger.LogInformation("Acessa primeiro item da pesquisa");
+            _logger.LogInformation("Acessa itens pesquisa");
             if (_aluraController.Details() is null)
             {
                 _logger.LogError("Falha ao exibir detalhes");

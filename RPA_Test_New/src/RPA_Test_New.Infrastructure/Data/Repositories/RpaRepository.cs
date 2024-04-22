@@ -15,9 +15,36 @@ namespace RPA_Test_New.Infrastructure.Data.Repositories
         private ILogger<RpaRepository> _logger { get; set; }
 
         public RpaRepository(IConfiguration configuration
-                             ,ILogger<RpaRepository> logger) : base(configuration)
+                             , ILogger<RpaRepository> logger) : base(configuration)
         {
             _logger = logger;
+        }
+
+
+        //SELECTs
+        public async Task<AluraCredential> GetCredential(CancellationToken ct = default)
+        {
+            var sql = $@"select 
+                            	vcUsuario
+                            	,vcSenha
+                            from 
+                            	[DESAFIO].[TB_ACESSO]
+                            where
+                            	biAtivo = 1";
+
+            using var connection = new SqlConnection(ConnectionString);
+            using var command = new SqlCommand(sql, connection);
+
+            await connection.OpenAsync(ct);
+            using var reader = await command.ExecuteReaderAsync(ct);
+
+            if (reader.Read())
+                return new
+                (
+                    User: reader[0].ToString(),
+                    Password: reader[1].ToString()
+                );
+            return null;
         }
 
         //INSERTs
@@ -80,5 +107,6 @@ namespace RPA_Test_New.Infrastructure.Data.Repositories
             }
 
         }
+
     }
 }

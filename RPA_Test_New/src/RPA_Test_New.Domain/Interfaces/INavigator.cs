@@ -5,6 +5,6 @@ namespace RPA_Test_New.Domain.Interfaces
     public interface INavigator
     {
         //Alura Interface
-        Task<ResultProcess> NavigationAlura(string url, string searchWord);
+        Task<ResultProcess> NavigationAlura(string url, string searchWord, AluraCredential aluraCredential);
     }
 }
