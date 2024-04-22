@@ -43,10 +43,10 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
                 _logger.LogInformation("Página carregada com sucesso");
 
                 //Redireciona para o login
-                if (_driver.WaitElement(By.XPath("/html/body/main/section[1]/header/div/nav/div[3]/a[1]")) is not null)
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:HomePage:login"])) is not null)
                 {
                     _logger.LogInformation("Acessa o login");
-                    _driver.WaitElement(By.XPath("/html/body/main/section[1]/header/div/nav/div[3]/a[1]")).Click();
+                    _driver.WaitElement(By.XPath(_configuration["Alura:HomePage:login"])).Click();
                     return new(true, "Acesso à página", "Página carregada com sucesso");
                 }
                 return new(false, "Falha da página", "Falha ao acesso a URL");

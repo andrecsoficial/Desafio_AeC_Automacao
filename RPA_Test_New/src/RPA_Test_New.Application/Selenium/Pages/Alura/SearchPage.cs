@@ -29,15 +29,15 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
 
         public ResultProcess SearchPageAlura(string searchWord)
         {
-
-            if (_driver.WaitElement(By.XPath("//*[@id='search__search-bar']")) is not null)
+            
+            if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:busca"])) is not null)
             {
                 //Insere texto na caixa de busca
-                _driver.WaitElement(By.XPath("//*[@id='search__search-bar']")).SendKeys(searchWord + Keys.Enter);
+                _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:busca"])).SendKeys(searchWord + Keys.Enter);
 
-                Thread.Sleep(5000);
+                Thread.Sleep(3000);
 
-                if (_driver.WaitElement(By.XPath("//*[@id='busca--filtros']/h2")) is not null)
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:filtroBusca"])) is not null)
                 {
                     _logger.LogInformation("Busca efetuada");
                     return new(true, "Busca", "Busca efetuada");
@@ -58,17 +58,17 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
             try
             {
                 //Filtra por cursos
-                if (_driver.WaitElement(By.XPath("//*[@id='busca--filtros']/h2")) is not null)
-                    _driver.WaitElement(By.XPath("//*[@id='busca--filtros']/div[1]/ul/li[1]/label/span")).Click();
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:filtroBusca"])) is not null)
+                    _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:filtroBuscaCursos"])).Click();
 
                 Thread.Sleep(3000);
 
                 //Valida se retornou a busca
-                if (_driver.WaitElement(By.XPath("//*[@id='busca']/nav/nav/button[1]")) is not null)
+                if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:pagina"])) is not null)
                 {
-                   
+
                     //Lista os resultados da busca
-                    IList<IWebElement> elementList = _driver.FindElements(By.XPath("//*[@id='busca-resultados']/ul")).ToList();
+                    IList<IWebElement> elementList = _driver.FindElements(By.XPath(_configuration["Alura:SearchPage:resultadoBusca"])).ToList();
 
                     //Total de itens retornado na busca
                     var total = elementList.Count;
@@ -79,9 +79,9 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
                     for (int i = 0; i < total; i++)
                     {
                         _driver.WaitElement(By.XPath($"//*[@id='busca-resultados']/ul[1]/li[{i + 1}]/div/a/div[1]/div[1]/h4")).Click();
-                     
+
                         //Valida se carregou a página
-                        if (_driver.WaitElement(By.XPath("//*[@id='tryToEnroll']")) is not null)
+                        if (_driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:enroll"])) is not null)
                         {
 
                             try
@@ -89,10 +89,10 @@ namespace RPA_Test_New.Application.Selenium.Pages.Alura
                                 dataExtracted.Add(new DataExtracted
                                 {
 
-                                    titulo = _driver.WaitElement(By.XPath("/html/body/section[1]/section/div[1]/div[2]/div[1]/div/div[2]/h1/strong")).Text,
-                                    professor = _driver.WaitElement(By.XPath("/html/body/section[2]/div/div[1]/div[2]/section/ul/li/div[2]/div/a/h3")).Text,
-                                    cargaHoraria = _driver.WaitElement(By.XPath("/html/body/section[1]/section/div[1]/div[2]/div[2]/div/div/div[1]/div/p[2]")).Text,
-                                    descricao = _driver.WaitElement(By.XPath("/html/body/section[2]/div/div[2]/div[2]/div[1]/div/ul/li[1]")).Text,
+                                    titulo = _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:titulo"])).Text,
+                                    professor = _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:professor"])).Text,
+                                    cargaHoraria = _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:cargaHoraria"])).Text,
+                                    descricao = _driver.WaitElement(By.XPath(_configuration["Alura:SearchPage:descricao"])).Text,
                                 });
 
                                 var record = _rpaRepository.InsertData(dataExtracted);
