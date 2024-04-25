@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.3.3" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.1-rc2.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.1-rc2.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Core" Version="6.0.1-rc2.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="6.0.1-rc2.4" />
+    <PackageReference Include="NLog.WindowsIdentity" Version="4.7.12" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="124.0.6367.6000" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RPA_Test_New.Application\RPA_Test_New.Application.csproj" />
+    <ProjectReference Include="..\RPA_Test_New.Domain\RPA_Test_New.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\HealthCheck\" />
+  </ItemGroup>
+</Project>
