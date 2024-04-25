@@ -1,6 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RPA_Test_New.Application.Selenium;
+using RPA_Test_New.Application.Selenium.Controllers;
+using RPA_Test_New.Application.Selenium.Pages.Alura;
 using RPA_Test_New.Domain.Interfaces;
+using RPA_Test_New.Infrastructure.Data.Repositories;
 using RPA_Test_New.Infrastructure.Services;
 
 namespace RPA_Test_New.Application.Configuration
@@ -10,15 +14,19 @@ namespace RPA_Test_New.Application.Configuration
         public static IServiceCollection AddAppDependencies(this IServiceCollection services, IConfiguration configuration)
         {
             //Repositório
-
+            services.AddTransient<IRpaRepository, RpaRepository>();
 
             //Serviços
-
+            services.AddSingleton<INavigator, Navigator>();
 
             //Controllers
-
+            services.AddTransient<AluraController>();
 
             //Páginas
+            services.AddTransient<HomePage>();
+            services.AddTransient<LoginPage>();
+            services.AddTransient<SearchPage>();
+
 
             services.AddSingleton<IDriverFactoryService>(_ =>
             {

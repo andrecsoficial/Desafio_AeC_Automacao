@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.19.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="124.0.6367.6000" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RPA_Test_New.Application\RPA_Test_New.Application.csproj" />
@@ -23,6 +23,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\HealthCheck\" />
-    <Folder Include="HealthChecks\" />
   </ItemGroup>
 </Project>

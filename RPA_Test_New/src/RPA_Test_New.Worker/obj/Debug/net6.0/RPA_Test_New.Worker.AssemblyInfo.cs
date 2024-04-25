@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RPA_Test_New.Worker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26619110bfaa2e6fab8162b45fc8407039023423")]
 [assembly: System.Reflection.AssemblyProductAttribute("RPA_Test_New.Worker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RPA_Test_New.Worker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
